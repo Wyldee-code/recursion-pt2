@@ -4,19 +4,26 @@ it reversed.
 
 Examples:
 
+***********************************************************************/
+
+
+function reverse(str) {
+
+  if(str === ""){
+    return ""
+     }else{
+    return reverse(str.substr(1)) + str.charAt(0);
+    }
+  }
+
+
+// debugger
 reverse("house"); // "esuoh"
 reverse("dog"); // "god"
 reverse("atom"); // "mota"
 reverse("q"); // "q"
 reverse("id"); // "di"
 reverse(""); // ""
-***********************************************************************/
-
-
-function reverse(str) {
-  // Your code here 
-}
-
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
