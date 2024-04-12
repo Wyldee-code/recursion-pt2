@@ -28,10 +28,11 @@ function advancedExponent(b, n) {
     return 1
   }
   if (n % 2 === 0){
-     let evenresults = advancedExponent(b, n / 2)
-     return evenresults * evenresults
+     let results = advancedExponent(b, n / 2);
+     return results * results
   }
-  return oddresults = advancedExponent(b, (n - 1) / 2) ** 2
+  let results = advancedExponent(b, (n - 1) / 2)
+  return  b * (results * results)
 
 }
 debugger
@@ -39,7 +40,7 @@ advancedExponent(2, 0); // 1
 advancedExponent(2, 1); // 2
 advancedExponent(2, 2); // 4
 advancedExponent(2, 3); // 8
-advancedExponent(2, 4); // 16
+console.log(advancedExponent(2, 4)); // 16
 advancedExponent(2, 5); // 32
 advancedExponent(2, 6); // 64
 advancedExponent(2, 7); // 128
